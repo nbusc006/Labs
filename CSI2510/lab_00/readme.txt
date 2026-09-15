@@ -1,0 +1,1 @@
+Ceci est le premier laboratoire pour mettre à l'essai les listes de type Objet qui doivent respecter absolument les classes et l'héritage. Tandis que les classes génériques sont beaucoup moins strictes et plus permissibles quand aux types utilisés.
