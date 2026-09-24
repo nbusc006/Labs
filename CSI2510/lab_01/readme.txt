@@ -1,0 +1,1 @@
+Ce laboratoire a pour but d'implémenter diverses méthodes de tri et de comparer leur efficacité. Cependant, le calcul du temps possède une marge d'erreur significative car on utilise les temps en secondes et non le temps du processeur qui est partagé avec le restant du système d'exploitation.
