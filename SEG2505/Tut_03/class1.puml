@@ -1,0 +1,26 @@
+@startuml
+
+class livre {
+    +isbn : String
+    +titre : String
+}
+
+class auteur {
+    +nom : String
+}
+
+class prêt {
+    +dateDemprunt : Date
+    +dateDeRetour : Date
+}
+
+class membreBiblio {
+    +identifiant : String
+    +nom : String
+}
+
+auteur "1..*" -- "*"livre : écrit
+membreBiblio "1" -- "*"prêt : possède
+prêt "*" --> "1"livre : pour
+
+@enduml

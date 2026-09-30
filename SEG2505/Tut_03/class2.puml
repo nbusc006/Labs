@@ -1,0 +1,34 @@
+@startuml
+
+class client {
+    +identifiant : String
+    +nom : String
+    +email : String
+}
+
+class commande {
+    +idCommande : String
+    +date : Date
+}
+
+class article {
+    +quantité : int
+    +prixUnitaire : décimale
+}
+
+class produit {
+    +idProduit : String
+    +nom : String
+    +prix : décimale
+}
+
+class catégorie {
+    nom : String
+}
+
+client "1" -- "*"commande : place
+commande *-- "*"article : contient
+article "*" --> "1"produit : représente
+produit "*" --> "1"catégorie : catégorizéComme
+
+@enduml
