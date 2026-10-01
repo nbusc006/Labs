@@ -130,6 +130,7 @@ public class AlgAnalysis {
 	 * Provides prompts for all experiments
 	 */
 	public static void main( String [] args ) {
+		@SuppressWarnings("resource")
 		Scanner    scanner = new Scanner ( System.in );
 
 		while( true ) {
