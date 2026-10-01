@@ -1,0 +1,1 @@
+Dans ce laboratoire, j'ai pû essayer des implémentations pour inverser une liste en utilisant un tableau et ensuite utiliser une liste chaînée simple comme une pile for ensuite tenter de faire la même chose. Dans la deuxième partie, j'ai dû vérifier l'égalité des paranthèses dans divers équations en utilisant une pile.
