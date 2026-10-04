@@ -1,0 +1,112 @@
+@startuml
+interface Printable {
+    + dump(): void
+}
+
+abstract class Transport {
+    - static globalCount: int
+    - id: int
+    - emptyWeight: double
+    - cruisingSpeed: double
+    + Transport()
+    + Transport(emptyWeight: double, cruisingSpeed: double)
+    + getId(): int
+    + getEmptyWeight(): double
+    + getCruisingSpeed(): double
+    + start(): void
+    + move(): void
+    + stop(): void
+    + run(): void
+    + dump(): void
+}
+
+abstract class LandTransport {
+    + LandTransport()
+    + LandTransport(emptyWeight: double, cruisingSpeed: double)
+    + start(): void
+    + move(): void
+    + stop(): void
+}
+
+abstract class AirTransport {
+    + AirTransport()
+    + AirTransport(emptyWeight: double, cruisingSpeed: double)
+    + start(): void
+    + move(): void
+    + stop(): void
+}
+
+class Bike {
+    - static MAX_WEIGHT: double
+    - static MAX_SPEED: double
+    - static REGISTRATION_TIME: LocalDateTime
+    - static MIN_SPEED: double
+    - static instanceCount: int
+    + Bike()
+    + Bike(emptyWeight: double, cruisingSpeed: double)
+    + static getMaxWeight(): double
+    + static getMaxSpeed(): double
+    + static getRegistrationTime(): LocalDateTime
+    + static count(): int
+    + start(): void
+    + move(): void
+    + stop(): void
+}
+
+class Car { 
+    - static MAX_WEIGHT: double
+    - static MAX_SPEED: double
+    - static REGISTRATION_TIME: LocalDateTime
+    - static MIN_SPEED: double
+    - static instanceCount: int
+    + Car()
+    + Car(emptyWeight: double, cruisingSpeed: double)
+    + static getMaxWeight(): double
+    + static getMaxSpeed(): double
+    + static getRegistrationTime(): LocalDateTime
+    + static count(): int
+    + start(): void
+    + move(): void
+    + stop(): void
+ }
+class Plane {     
+    - static MAX_WEIGHT: double
+    - static MAX_SPEED: double
+    - static REGISTRATION_TIME: LocalDateTime
+    - static MIN_SPEED: double
+    - static instanceCount: int
+    + Plane()
+    + Plane(emptyWeight: double, cruisingSpeed: double)
+    + static getMaxWeight(): double
+    + static getMaxSpeed(): double
+    + static getRegistrationTime(): LocalDateTime
+    + static count(): int
+    + start(): void
+    + move(): void
+    + stop(): void 
+    }
+class Helicopter { 
+    - static MAX_WEIGHT: double
+    - static MAX_SPEED: double
+    - static REGISTRATION_TIME: LocalDateTime
+    - static MIN_SPEED: double
+    - static instanceCount: int
+    + Helicopter()
+    + Helicopter(emptyWeight: double, cruisingSpeed: double)
+    + static getMaxWeight(): double
+    + static getMaxSpeed(): double
+    + static getRegistrationTime(): LocalDateTime
+    + static count(): int
+    + start(): void
+    + move(): void
+    + stop(): void
+}
+
+Printable <|.. Transport
+Transport <|-- LandTransport
+Transport <|-- AirTransport
+LandTransport <|-- Bike
+LandTransport <|-- Car
+AirTransport <|-- Plane
+AirTransport <|-- Helicopter
+@enduml
