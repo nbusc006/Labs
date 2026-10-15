@@ -1,0 +1,50 @@
+@startuml
+/'Classes'/
+class Vol {
+    +origine : String {readOnly}
+    +id : String
+    +départ : LocalDateTime
+    +durée : LocalTime
+    +destination : String
+    +sièges[] : ArrayList<Sièges>
+}
+
+class Passager implements ProgrammeFidélité {
+    +siège : Siège
+}
+
+class MembreÉquipage {
+
+}
+
+class Siège {
+    +rangée : char
+    +numéro : int
+}
+
+interface ProgrammeFidélité {
+    -miles : int
+    -avantages[] : ArrayList[]
+    +inscrit : Boolean
+}
+
+class Pilote extends MembreÉquipage {
+
+}
+
+class Hôte extends MembreÉquipage {
+
+}
+
+
+
+/'Associations'/
+Siège"1" *-up- "1"Passager: Assigné à
+Vol"1" *-- "1..*" Siège : Peut avoir
+Vol"1..*" *-down-> "0..*" Passager: Peut avoir
+Pilote"1" --> "1..*" Hôte : Supervise
+Hôte"1..*" -up-> "0..*" Passager : Supervise
+Vol"1..*" *-down-> "1..*" MembreÉquipage: Peut avoir
+
+
+@enduml
