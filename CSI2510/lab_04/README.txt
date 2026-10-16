@@ -1,0 +1,1 @@
+Ce laboratoire consite à implémenter les tas avec des files prioritaires. Je semble éprouver plusieurs difficultées avec les arbres ainsi que les tas et je n'ai pas pu mettre les tests dans un état fonctionnel.
