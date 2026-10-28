@@ -1,0 +1,7 @@
+step clusters largest connectedPairs
+1 1 1 0
+2 1 1 0
+3 1 1 0
+4 1 1 0
+First fully connected step: 0
+Element visits: 0

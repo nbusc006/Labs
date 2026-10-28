@@ -1,0 +1,14 @@
+step clusters largest connectedPairs
+1 7 2 1
+2 6 3 3
+3 5 3 4
+4 4 5 10
+5 3 5 11
+6 2 5 13
+7 1 8 28
+8 1 8 28
+9 1 8 28
+10 1 8 28
+11 1 8 28
+First fully connected step: 7
+Element visits: 10
